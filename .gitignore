@@ -70,3 +70,17 @@ Thumbs.db
 /build/
 .DS_Store
 /gradle-app.setting
+
+# Deployment folder
+/deployment/
+
+backend/product/gradle/wrapper/*
+backend/product/build.gradle
+backend/product/compose.yaml
+backend/product/gradlew
+backend/product/gradlew.bat
+backend/product/docker-compose.yml
+backend/product/settings.gradle
+backend/product/Help.md
+.vscode/settings.json
+backend/product/src/main/resources/application.properties
