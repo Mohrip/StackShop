@@ -22,6 +22,7 @@ import java.util.List;
 @Setter
 @Entity
 public class Category {
+    
 
     @Id
     @GeneratedValue
