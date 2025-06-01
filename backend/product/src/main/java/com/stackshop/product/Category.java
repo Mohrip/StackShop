@@ -1,7 +1,6 @@
 package com.stackshop.product;
 
 
-import com.stackshop.product.Product;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

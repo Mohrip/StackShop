@@ -1,6 +1,5 @@
 package com.stackshop.product;
 
-import com.stackshop.product.Category;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

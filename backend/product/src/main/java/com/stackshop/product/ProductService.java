@@ -23,11 +23,9 @@ public class ProductService {
     }
 
     public Product createProduct(Product product) {
-        // Check if category exists
         if (product.getCategory() != null && product.getCategory().getId() != null) {
             Category category = categoryRepository.findById(product.getCategory().getId())
                     .orElseGet(() -> {
-                        // Create a new category if it doesn't exist
                         Category newCategory = new Category();
                         newCategory.setName(product.getCategory().getName() != null ? product.getCategory().getName() : "Default Category");
                         newCategory.setDescription(product.getCategory().getDescription() != null ? product.getCategory().getDescription() : "Default Description");
@@ -35,11 +33,9 @@ public class ProductService {
                     });
             product.setCategory(category);
         } else if (product.getCategory() != null) {
-            // Create a new category if no ID is provided
             Category newCategory = categoryRepository.save(product.getCategory());
             product.setCategory(newCategory);
         } else {
-            // Handle case where no category is provided
             throw new RuntimeException("Category information is required");
         }
 
