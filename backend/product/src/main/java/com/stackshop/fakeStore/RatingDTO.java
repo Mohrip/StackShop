@@ -6,7 +6,7 @@ public class RatingDTO {
     
         public double getRate() {
             return rate;
-        }
+        } 
     
         public void setRate(double rate) {
             this.rate = rate;
