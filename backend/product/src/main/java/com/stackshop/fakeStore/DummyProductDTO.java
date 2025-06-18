@@ -1,7 +1,7 @@
 package com.stackshop.fakeStore;
 
 import java.util.List;
-
+ 
 public class DummyProductDTO {
     private int id;
     private String title;
