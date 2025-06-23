@@ -1,6 +1,7 @@
 package com.stackshop.product;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +28,8 @@ public class Category {
     private Integer id;
     private String name;
     private String description;
+
+    @JsonIgnore
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
 }
