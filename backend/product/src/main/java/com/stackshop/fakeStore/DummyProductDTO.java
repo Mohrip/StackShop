@@ -316,7 +316,10 @@ public class DummyProductDTO {
         return thumbnail;
     }
 
+
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
+    
+ 
 }
