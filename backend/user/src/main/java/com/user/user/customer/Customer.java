@@ -1,4 +1,4 @@
-package main.java.com.user.user.customer;
+package com.user.user.customer;
 
 
 
@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Customer {
 
-    @Id
+   @Id
     private String id;
 
     private String firstname;

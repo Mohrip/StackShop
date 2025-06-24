@@ -1,10 +1,11 @@
-package main.java.com.user.user.customer;
+package com.user.user.customer;
 
 
-import com.fatichdev.ecommerce.exception.CustomerNotFoundException;
+import com.user.user.exception.CustomerNotFoundException;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,21 +14,21 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerService {
 
-    private final CustomerRepository repository;
-    private final CustomerMapper mapper;
+   private final CustomerRepository repository;
+   private final CustomerMapper mapper;
 
-    public String createCustomer(CustomerRequest request) {
-        var customer = repository.save(mapper.toCustomer(request));
-        return customer.getId();
+   public String createCustomer(CustomerRequest request) {
+       var customer = repository.save(mapper.toCustomer(request));
+       return customer.getId();
     }
 
     public void updateCustomer(CustomerRequest request) {
-        var customer = repository.findById(request.id())
-                .orElseThrow(() -> new CustomerNotFoundException(
+       var customer = repository.findById(request.id())
+               .orElseThrow(() -> new CustomerNotFoundException(
                         String.format("Cannot update customer:: No customer found with provided ID:: %s", request.id())
                 ));
-        mergerCustomer(customer, request);
-        repository.save(customer);
+         mergerCustomer(customer, request);
+         repository.save(customer);
     }
 
     private void mergerCustomer(Customer customer, CustomerRequest request) {
@@ -50,31 +51,31 @@ public class CustomerService {
 
     }
 
-    public List<CustomerResponse> findAllCustomers() {
+     public List<CustomerResponse> findAllCustomers() {
         return repository.findAll().stream()
-                .map(mapper::fromCustomer)
-                .toList();
-    }
+               .map(mapper::fromCustomer)
+        .toList();
+     }
 
     public Boolean existsById(String customerId) {
         return repository.findById(customerId).isPresent();
     }
 
-    public CustomerResponse findById(String customerId) {
-        return repository.findById(customerId)
-                .map(mapper::fromCustomer)
-                .orElseThrow(() -> new CustomerNotFoundException(
+   public CustomerResponse findById(String customerId) {
+       return repository.findById(customerId)
+              .map(mapper::fromCustomer)
+              .orElseThrow(() -> new CustomerNotFoundException(
                         String.format("No customer found with provided ID:: %s", customerId)
                 ));
     }
 
     public void deleteCustomer(String customerId) {
-        if (!existsById(customerId)) {
-            throw new CustomerNotFoundException(
-                    String.format("Cannot delete customer:: No customer found with provided ID:: %s", customerId)
+       if (!existsById(customerId)) {
+           throw new CustomerNotFoundException(
+                   String.format("Cannot delete customer:: No customer found with provided ID:: %s", customerId)
             );
-        }
-        repository.deleteById(customerId);
+       }
+      repository.deleteById(customerId);
     }
 
 }

@@ -1,4 +1,4 @@
-package main.java.com.user.user.customer;
+package com.user.user.customer;
 
 
 
@@ -18,44 +18,44 @@ public class CustomerController {
 
     @PostMapping
     public ResponseEntity<String> createCustomer(
-           @RequestBody @Valid CustomerRequest request
+          @RequestBody @Valid CustomerRequest request
     ) {
-        return ResponseEntity.ok(service.createCustomer(request));
-    }
+       return ResponseEntity.ok(service.createCustomer(request));
+   }
 
-    @PutMapping
-    public ResponseEntity<Void> updateCustomer(
-           @RequestBody @Valid CustomerRequest request
-    ) {
-        service.updateCustomer(request);
-        return ResponseEntity.accepted().build();
-    }
+   @PutMapping
+   public ResponseEntity<Void> updateCustomer(
+         @RequestBody @Valid CustomerRequest request
+   ) {
+       service.updateCustomer(request);
+     return ResponseEntity.accepted().build();
+   }
 
-    @GetMapping
-    public ResponseEntity<List<CustomerResponse>> findAll() {
-        return ResponseEntity.ok(service.findAllCustomers());
+   @GetMapping
+   public ResponseEntity<List<CustomerResponse>> findAll() {
+       return ResponseEntity.ok(service.findAllCustomers());
     }
 
     @GetMapping("/exists/{customer-id}")
     public ResponseEntity<Boolean> exists(
-           @PathVariable("customer-id") String customerId
+         @PathVariable("customer-id") String customerId
     ) {
-        return ResponseEntity.ok(service.existsById(customerId));
-    }
+       return ResponseEntity.ok(service.existsById(customerId));
+   }
 
-    @GetMapping("/{customer-id}")
+   @GetMapping("/{customer-id}")
     public ResponseEntity<CustomerResponse> findById(
-            @PathVariable("customer-id") String customerId
-    ) {
-        return ResponseEntity.ok(service.findById(customerId));
-    }
+          @PathVariable("customer-id") String customerId
+   ) {
+       return ResponseEntity.ok(service.findById(customerId));
+   }
 
-    @DeleteMapping("/{customer-id}")
-    public ResponseEntity<Void> deleteById(
-            @PathVariable("customer-id") String customerId
+   @DeleteMapping("/{customer-id}")
+   public ResponseEntity<Void> deleteById(
+          @PathVariable("customer-id") String customerId
     ) {
-        service.deleteCustomer(customerId);
-        return ResponseEntity.accepted().build();
+      service.deleteCustomer(customerId);
+       return ResponseEntity.accepted().build();
     }
 
 }

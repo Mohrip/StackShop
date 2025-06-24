@@ -1,4 +1,4 @@
-package main.java.com.user.user.customer;
+package com.user.user.customer;
     
 
 

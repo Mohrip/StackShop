@@ -1,4 +1,4 @@
-package main.java.com.user.user.handler;
+package com.user.user.handler;
 
 import java.util.Map;
 

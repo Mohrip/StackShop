@@ -1,4 +1,4 @@
-package main.java.com.user.user.customer;
+package com.user.user.customer;
 
 import lombok.*;
 import org.springframework.validation.annotation.Validated;

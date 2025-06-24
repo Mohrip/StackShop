@@ -1,6 +1,6 @@
-package main.java.com.user.user.handler;
+package com.user.user.handler;
 
-import com.fatichdev.ecommerce.exception.CustomerNotFoundException;
+import com.user.user.exception.CustomerNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

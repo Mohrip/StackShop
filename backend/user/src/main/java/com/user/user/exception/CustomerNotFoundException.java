@@ -1,4 +1,4 @@
-package main.java.com.user.user.exception;
+package com.user.user.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
