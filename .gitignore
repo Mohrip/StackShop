@@ -93,4 +93,16 @@ backend/product/Help.md
 backend/product/src/main/resources/application.properties
 
 
+# User folder
+backend/user/gradle/wrapper/*
+backend/user/build.gradle
+backend/user/compose.yaml
+backend/user/gradlew
+backend/user/gradlew.bat
+backend/user/docker-compose.yml
+backend/user/settings.gradle
+backend/user/Help.md
+backend/user/src/main/resources/application.properties
+
+
 
