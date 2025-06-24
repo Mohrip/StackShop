@@ -10,7 +10,7 @@ services:
   mongodbatlas:
     image: 'mongodb/mongodb-atlas-local:latest'
     ports:
-      - '27017'
+      - '27017:27017'
   mysql:
     image: 'mysql:latest'
     environment:
