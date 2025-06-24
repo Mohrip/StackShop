@@ -1,3 +1,3 @@
-public class CustomerResponse {
+package main.java.com.user.user.customer;
     
-}
+
