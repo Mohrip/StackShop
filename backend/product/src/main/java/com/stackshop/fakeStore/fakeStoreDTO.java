@@ -8,7 +8,7 @@ public class fakeStoreDTO {
     private String category;
     private String image;
     private RatingDTO rating;
-
+ //
     public int getId() {
         return id;
     }
