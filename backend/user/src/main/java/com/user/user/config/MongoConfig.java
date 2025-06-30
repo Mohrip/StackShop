@@ -1,6 +1,5 @@
 package com.user.user.config;
-
-    
+  
 import com.mongodb.client.MongoClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
