@@ -16,7 +16,7 @@ public class fakeStoreController {
 
     // @GetMapping("/fakeStore")
     // public List<fakeStoreDTO> getFakeStore() {
-    //     return fakeStoreService.getFakeStore();
+    //    return fakeStoreService.getFakeStore();
     // }
     @GetMapping("/fakestore")
     public List< Object> getFakeStore() {
