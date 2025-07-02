@@ -21,7 +21,6 @@ public class fakeStoreService {
 
 
         String responseJson = restTemplate.getForObject(url, String.class);
-
         String responseJson2 = restTemplate.getForObject(url2, String.class);
         
         
