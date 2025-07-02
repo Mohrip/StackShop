@@ -37,6 +37,7 @@ public class fakeStoreService {
         }
 
         //  try {
+        
         //     product = objectMapper.readValue( new TypeReference<List<fakeStoreDTO>>() {});
         //  } catch (JsonProcessingException e) {
         //     System.err.println("Error processing JSON: " + e.getMessage());
